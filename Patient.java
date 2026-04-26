@@ -11,6 +11,7 @@ public class Patient {
 
     public String getPatientName() {
         // Nathaniel Sykes
+        return this.patientName;
     }
 
     public String getPatientAddress() {
@@ -19,6 +20,7 @@ public class Patient {
 
     public String getPatientSex() {
         // Nathaniel Sykes
+        return this.patientSex;
     }
 
     public String getDiagnosisCode() {
@@ -27,6 +29,7 @@ public class Patient {
 
     public String getCurrentCondition() {
         // Nathaniel Sykes
+        return this.currentCondition;
     }
 
     public void setPatientName(String patientName) {
@@ -35,6 +38,10 @@ public class Patient {
 
     public void setPatientAddress(String patientAddress) {
         // Nathaniel Sykes
+        if (patientAddress.equals(null)) {
+            throw new IllegalArgumentException("Patient Address is a required field.");
+        }
+        this.patientAddress = patientAddress;
     }
 
     public void setPatientSex(String patientSex) {
@@ -43,9 +50,18 @@ public class Patient {
 
     public void setDiagnosisCode(String diagnosisCode) {
         // Nathaniel Sykes
+        if (diagnosisCode.equals(null)) {
+            throw new IllegalArgumentException("Diagnosis code is a required field.");
+        }
+        this.diagnosisCode = diagnosisCode;
     }
 
     public void setCurrentCondition(String currentCondition) {
         // Jemimah Joseph
+    }
+
+    public String toString() {
+        // Nathaniel Sykes
+        return "Patient Name: " + this.getPatientName() + "\n\nPatient Address: " + this.getPatientAddress() + "\n\nPatient Sex: " + this.getPatientSex() + "\n\nDiagnosis Code: " + this.getDiagnosisCode() + "\n\nCurrent Condtion: " + this.getCurrentCondition();
     }
 }
