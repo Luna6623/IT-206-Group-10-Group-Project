@@ -5,8 +5,13 @@ public abstract class Department {
     private int numofNurses;
     private int numOfPatients;
 
-    public Department(String deptName, String deptCode) {
+    public Department(String deptName, String deptCode, int numOfDoctors, int numofNurses, int numOfPatients) {
         // Nathaniel Sykes
+        setDeptName(deptName);
+        setDeptCode(deptCode);
+        setNumOfDoctors(numOfDoctors);
+        setNumOfNurses(numofNurses);
+        setNumOfPatients(numOfPatients);
     }
 
     public String getDeptName() {
@@ -15,6 +20,7 @@ public abstract class Department {
 
     public String getDeptCode() {
         // Nathaniel Sykes
+        return "";
     }
 
     public int getNumOfDoctors() {
@@ -23,6 +29,7 @@ public abstract class Department {
 
     public int getNumOfNurses() {
         // Nathaniel Sykes
+        return 0;
     }
 
     public int getNumOfPatients() {
@@ -31,6 +38,7 @@ public abstract class Department {
 
     public void setDeptName(String deptName) {
         // Nathaniel Sykes
+        this.deptName = deptName;
     }
 
     public void setDeptCode(String deptCode) {
@@ -39,6 +47,7 @@ public abstract class Department {
 
     public void setNumOfDoctors(int numOfDoctors) {
         // Nathaniel Sykes
+        this.numOfDoctors = numOfDoctors;
     }
 
     public void setNumOfNurses(int numOfNurses) {
@@ -47,5 +56,6 @@ public abstract class Department {
 
     public void setNumOfPatients(int numOfPatients) {
         // Nathaniel Sykes
+        this.numOfPatients = numOfPatients;
     }
 }
