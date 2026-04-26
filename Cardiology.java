@@ -1,15 +1,7 @@
 public class Cardiology extends Department{
     
-    public Cardiology(String deptName, String deptCode) {
-        super(deptName, deptCode);
-    }
-
-    public void setDeptName(String deptName) {
-        // Jemimah Joseph
-    }
-
-    public void setDeptCode(String deptCode) {
-        // Nathaniel Sykes
+    public Cardiology(String deptName, String deptCode, int numOfDoctors, int numofNurses, int numOfPatients) {
+        super(deptName, deptCode, numOfDoctors, numofNurses, numOfPatients);
     }
 
     public String getDeptName() {
@@ -18,6 +10,7 @@ public class Cardiology extends Department{
 
     public String getDeptCode() {
         // Nathaniel Sykes
+        return "CAR";
     }
 
     public String toString() {
