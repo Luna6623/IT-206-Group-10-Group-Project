@@ -4,9 +4,12 @@ public class Patient {
     private String patientSex;
     private String diagnosisCode;
     private String currentCondition;
+    private static int patientNum;
 
     public Patient (String patientName, String patientAddress, String patientSex, String diagnosisCode, String currentCondition) {
         // Jemimah Joseph
+
+        patientNum++;
     }
 
     public String getPatientName() {
@@ -30,6 +33,10 @@ public class Patient {
     public String getCurrentCondition() {
         // Nathaniel Sykes
         return this.currentCondition;
+    }
+
+    public static int getPatientNum() {
+        return patientNum;
     }
 
     public void setPatientName(String patientName) {
@@ -59,6 +66,12 @@ public class Patient {
     public void setCurrentCondition(String currentCondition) {
         // Jemimah Joseph
     }
+
+    // Update patientNum
+    public static void updatePatientNum() {
+        patientNum--;
+    }
+
 
     public String toString() {
         // Nathaniel Sykes
