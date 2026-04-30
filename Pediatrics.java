@@ -5,6 +5,7 @@ public class Pediatrics extends Department{
 
     public String getDeptName() {
         // Jemimah Joseph
+        return super.getDeptName();
     }
 
     public String getDeptCode() {
@@ -14,5 +15,8 @@ public class Pediatrics extends Department{
 
     public String toString() {
         // Jemimah Joseph
+        return "Department Name: " + getDeptName() + "\nDepartment Code: " + this.getDeptCode() +
+            "\nNumber of Doctors: " + super.getNumofDoctors() + "\nNumber of Nurses: " + super.getNumOfNurses() +
+            "\nNumber of Patients: " + super.getNumOfPatients();
     }
 }
