@@ -10,6 +10,7 @@ public class Neurology extends Department{
 
     public String getDeptCode() {
         // Jemimah Joseph
+        return "NEURO";
     }
 
     public String toString() {
