@@ -8,6 +8,11 @@ public class Patient {
 
     public Patient (String patientName, String patientAddress, String patientSex, String diagnosisCode, String currentCondition) {
         // Jemimah Joseph
+        setPatientName(patientName);
+        setPatientAddress(patientAddress);
+        setPatientSex(patientSex);
+        setDiagnosisCode(diagnosisCode);
+        setCurrentCondition(currentCondition);
 
         patientNum++;
     }
@@ -19,6 +24,7 @@ public class Patient {
 
     public String getPatientAddress() {
         // Jemimah Joseph
+        return this.patientAddress;
     }
 
     public String getPatientSex() {
@@ -28,6 +34,7 @@ public class Patient {
 
     public String getDiagnosisCode() {
         // Jemimah Joseph
+        return this.diagnosisCode;
     }
 
     public String getCurrentCondition() {
@@ -41,6 +48,7 @@ public class Patient {
 
     public void setPatientName(String patientName) {
         // Jemimah Joseph
+        this.patientName = patientName;
     }
 
     public void setPatientAddress(String patientAddress) {
@@ -53,6 +61,7 @@ public class Patient {
 
     public void setPatientSex(String patientSex) {
         // Jemimah Joseph
+        this.patientSex = patientSex;
     }
 
     public void setDiagnosisCode(String diagnosisCode) {
@@ -65,6 +74,7 @@ public class Patient {
 
     public void setCurrentCondition(String currentCondition) {
         // Jemimah Joseph
+        this.currentCondition = currentCondition;
     }
 
     // Update patientNum
