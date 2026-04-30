@@ -6,6 +6,7 @@ public class Cardiology extends Department{
 
     public String getDeptName() {
         // Jemimah Joseph
+        return super.getDeptName();
     }
 
     public String getDeptCode() {
@@ -15,5 +16,8 @@ public class Cardiology extends Department{
 
     public String toString() {
         // Jemimah Joseph
+        return "Department Name: " + this.getDeptName() + "\nDepartment Code: " + this.getDeptCode(); +
+            "\nNumber Of Doctors: " + super.getNumOfDoctors() + "\nNumber of Nurses: " + super.getNumOfNurses() +
+            \nNumber of Patients: " + super.getNumOfPatients();
     }
 }
