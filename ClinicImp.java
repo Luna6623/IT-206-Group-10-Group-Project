@@ -1,4 +1,7 @@
 public class ClinicImp {
+
+    static int patientCount = 0;
+    static Patient[] patientArray = new Patient[100];
     
     public static void main(String[] args) {
         // Nathaniel Sykes
@@ -6,6 +9,7 @@ public class ClinicImp {
         Department[] deptArray = new Department[3];
         Patient[] patientArray = new Patient[Patient.getPatientNum()];
 
+        
         // Variables for do while loop
         int choice = 0;
         boolean mainBool = false;
@@ -49,6 +53,18 @@ public class ClinicImp {
 
     public static void addPatient() {
         // Jemimah Joseph
+        String name: JOPtionPane.showInputDialog("Enter Patient Name: ");
+        String address: JOptionPane.showInputDialog("Enter Patient Address: ");
+        String sex: JOptionPane.showInputDialog("Enter Patient Sex: ");
+        String diagnosis: JOPtionPane.showInputDialog("Enter Diagnosis Code: ");
+        String condition: JOPtionPane.showInputDialog("Enter current condition: ");
+
+        Patient newPatient = new Patient(name, address, sex, diagnosis, condition);
+
+        patientArray[patientCount] = newPatient;
+        patientCount++;
+
+        JOptionPane.showMessageDialog(null, "Patient Added Successfully.");
     }
 
     public static void deletePatient() {
@@ -87,6 +103,18 @@ public class ClinicImp {
 
     public static Patient searchPatient() {
         // Jemimah Joseph
+        String name = JOptionPane.showinputDialog("Enter the patient's name: ");
+        String address = JOptionPane.showInputDialog("enter the patient's address: ");
+
+        for (int i =0; i < patientCount; i++) {
+            if (patientArray[i] != null && patientArray[i].getPatientName().equalsIgnoreCase)name) &&
+                patientArray[i].getPatientAddress().equalsIgnoreCase(address)) {
+                return patientArray[i];
+        }
+    }
+
+    JOptionPane.showMessageDialog(null, "Patient not found.");
+    return null;
     }
 
     public static void displayPatientRecord() {
@@ -99,6 +127,7 @@ public class ClinicImp {
 
     public static void displayMenu() {
         // Jemimah Joseph
+        "1. Add patient\n2. Delete Patient\n3. Search Patient\n4. Display Patient Records\n5. Display Menu\n6. Exit");
     }
 
     public static boolean ConfirmDeletion() {
